@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    
-    Animator menuAnimator;  // переменная для получения аниматора из назначенного объекта
 
+
+    Animator menuAnimatorBoost;
     void Start()
     {
        
     }
     public void OpenSettings(GameObject objWithAnimator) // Получаем из объекта в инспекторе аниматор и запускаем соответствующую анимацию
     {
+        Animator menuAnimator; // переменная типа Animator для получения его из назначенного объекта
         menuAnimator = objWithAnimator.GetComponent<Animator>();
         if (menuAnimator.GetBool("isHide") == true)
         {
@@ -23,6 +24,29 @@ public class GameController : MonoBehaviour
         {
             menuAnimator.Play("close");
             menuAnimator.SetBool("isHide", true); 
+        }
+    }
+
+    public void OpenBoostMenu(GameObject objWithAnimator)
+    {
+        if (menuAnimatorBoost != null)
+        {
+            menuAnimatorBoost.Play("close");
+            menuAnimatorBoost.SetBool("isHide", true);
+        }
+
+
+        menuAnimatorBoost = objWithAnimator.GetComponent<Animator>();
+        
+        if (menuAnimatorBoost.GetBool("isHide") == true)
+        {
+            menuAnimatorBoost.Play("open");
+            menuAnimatorBoost.SetBool("isHide", false);
+        }
+        else
+        {
+            menuAnimatorBoost.Play("close");
+            menuAnimatorBoost.SetBool("isHide", true);
         }
     }
 }

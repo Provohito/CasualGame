@@ -873,6 +873,7 @@ GameObject:
   - component: {fileID: 93105251}
   - component: {fileID: 93105250}
   - component: {fileID: 93105249}
+  - component: {fileID: 93105252}
   m_Layer: 5
   m_Name: passiveCoinBoost
   m_TagString: Untagged
@@ -941,7 +942,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 93105250}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1655467704}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: OpenBoostMenu
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 93105247}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &93105250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -980,6 +993,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 93105247}
   m_CullTransparentMesh: 0
+--- !u!95 &93105252
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93105247}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ae1ae5989b61e7b4a920fa44e380332d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &159291768
 GameObject:
   m_ObjectHideFlags: 0
@@ -2077,6 +2109,7 @@ GameObject:
   - component: {fileID: 854562022}
   - component: {fileID: 854562021}
   - component: {fileID: 854562020}
+  - component: {fileID: 854562023}
   m_Layer: 5
   m_Name: coinBoost
   m_TagString: Untagged
@@ -2145,7 +2178,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 854562021}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1655467704}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: OpenBoostMenu
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 854562018}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &854562021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2184,6 +2229,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 854562018}
   m_CullTransparentMesh: 0
+--- !u!95 &854562023
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854562018}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6aec22c1a1f8c9b4e825c3c87bc00469, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &899235921
 GameObject:
   m_ObjectHideFlags: 0
@@ -3698,6 +3762,7 @@ GameObject:
   - component: {fileID: 1795348543}
   - component: {fileID: 1795348542}
   - component: {fileID: 1795348541}
+  - component: {fileID: 1795348544}
   m_Layer: 5
   m_Name: speedBoost
   m_TagString: Untagged
@@ -3721,7 +3786,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -340.10016, y: -61}
+  m_AnchoredPosition: {x: -340.10016, y: -95}
   m_SizeDelta: {x: 100, y: 162.24915}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1795348541
@@ -3766,7 +3831,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1795348542}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1655467704}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: OpenBoostMenu
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1795348539}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1795348542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3805,6 +3882,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1795348539}
   m_CullTransparentMesh: 0
+--- !u!95 &1795348544
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795348539}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e42ae14a94543294aa218e519147ad98, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1887097020
 GameObject:
   m_ObjectHideFlags: 0
@@ -4088,6 +4184,7 @@ GameObject:
   - component: {fileID: 2094140147}
   - component: {fileID: 2094140146}
   - component: {fileID: 2094140145}
+  - component: {fileID: 2094140148}
   m_Layer: 5
   m_Name: damageBoost
   m_TagString: Untagged
@@ -4156,7 +4253,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2094140146}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1655467704}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: OpenBoostMenu
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2094140143}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2094140146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4195,6 +4304,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2094140143}
   m_CullTransparentMesh: 0
+--- !u!95 &2094140148
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094140143}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 67b028c5c1a50834aaed950a17a3306b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2112740123
 GameObject:
   m_ObjectHideFlags: 0
