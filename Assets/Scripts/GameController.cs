@@ -6,6 +6,9 @@ public class GameController : MonoBehaviour
 {
     
     Animator menuAnimatorBoost;
+    GameObject boostPanel;
+    [SerializeField]
+    GameObject startBoostOpen;
     void Start()
     {
        
@@ -33,6 +36,11 @@ public class GameController : MonoBehaviour
             menuAnimatorBoost.Play("close");
             menuAnimatorBoost.SetBool("isHide", true);
         }
+        else
+        {
+            startBoostOpen.GetComponent<Animator>().Play("close");
+            startBoostOpen.GetComponent<Animator>().SetBool("isHide", true);
+        }    
 
 
         menuAnimatorBoost = objWithAnimator.GetComponent<Animator>();
@@ -49,6 +57,18 @@ public class GameController : MonoBehaviour
         }
     }
 
+    public void OpenPanel(GameObject panel)
+    {
+        if (boostPanel != null)
+        {
+            boostPanel.SetActive(false);
+            panel.SetActive(true);
+        }
+        else
+            panel.SetActive(true);
 
+        boostPanel = panel;
+        
+    }
 
 }
