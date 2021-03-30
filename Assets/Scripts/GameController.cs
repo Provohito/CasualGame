@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-
-
+    
     Animator menuAnimatorBoost;
     void Start()
     {
@@ -49,4 +48,7 @@ public class GameController : MonoBehaviour
             menuAnimatorBoost.SetBool("isHide", true);
         }
     }
+
+
+
 }
