@@ -17,25 +17,24 @@ public class PlayerController : MonoBehaviour
 
     void Awake()
     {
-        player = Instantiate(playerPrefab, this.transform);
-        playerRB = player.GetComponent<Rigidbody2D>();
+        
     }
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) & playerEnable == false)
         {
             MousePos = Input.mousePosition;
             var world = Camera.main.ScreenToWorldPoint(MousePos);
+            player = Instantiate(playerPrefab, this.transform);
+            playerRB = player.GetComponent<Rigidbody2D>();
             player.transform.position = new Vector3(world.x, world.y, 0);
+            playerEnable = true;
         }
         
     }
 
     public void MovingPlayer()
     {
-        MousePos = Input.mousePosition;
-
-        var world = Camera.main.ScreenToWorldPoint(MousePos);
             if (Input.GetMouseButtonUp(0))
             {
                 Shoot(3);
@@ -43,9 +42,18 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    void Shoot(int speed)
+    void Shoot(int speed) // Скорость снаряда
     {
         Debug.Log("up");
         playerRB.velocity = new Vector2(0f, speed);
+        StartCoroutine(WaitTimer());
     }
+
+    IEnumerator WaitTimer()// Скорость выпуска снаряда
+    {
+        yield return new WaitForSeconds(2);
+        playerEnable = false;
+        StopAllCoroutines();
+    }
+
 }
